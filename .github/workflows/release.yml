@@ -27,8 +27,8 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN }}
-          role-duration-seconds: 1200
+#          role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN }}
+#          role-duration-seconds: 1200
           aws-region: us-east-1
       - name: download layer from source
         run: |
@@ -39,8 +39,8 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN_PROD }}
-          role-duration-seconds: 1200
+#          role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN_PROD }}
+#          role-duration-seconds: 1200
           aws-region: ${{ matrix.aws_region }}
           mask-aws-account-id: false
       - name: publish
@@ -261,8 +261,8 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN }}
-          role-duration-seconds: 1200
+#          role-to-assume: ${{ secrets.AWS_ASSUME_ROLE_ARN }}
+#          role-duration-seconds: 1200
           aws-region: ${{ matrix.aws_region }}
       - uses: hashicorp/setup-terraform@v1
       - name: Initialize terraform
